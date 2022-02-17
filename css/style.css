@@ -74,4 +74,8 @@ section {
   .input-field {
     overflow: hidden;
   }
+  .save-input {
+    overflow: hidden;
+    margin: 10px 0;
+  }
 }
