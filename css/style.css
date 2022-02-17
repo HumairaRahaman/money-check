@@ -14,8 +14,11 @@ header h2 {
   color: cadetblue;
   font-size: 60px;
 }
-.money-layout {
+section {
   background-color: antiquewhite;
+}
+
+.money-layout {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -34,4 +37,21 @@ header h2 {
 .money-calc {
   flex-basis: 40%;
   padding: 100px 20px;
+}
+
+/* error */
+.error {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  background: #12a305cb;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 5px 20px;
+  display: none;
+}
+.error-section {
+  width: 35%;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }

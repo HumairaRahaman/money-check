@@ -21,129 +21,144 @@
       <h2 class="text-center">Money Moves💰</h2>
     </header>
     <!-- calculation -->
-    <section class="money-layout d-flex container">
-      <div class="money-img">
-        <img
-          src="images/jp-valery-9BatP4ovW2I-unsplash.jpeg"
-          class="img-fluid"
-          alt=""
-        />
-      </div>
-      <div class="money-calc">
-        <div class="container">
-          <!-- income -->
-          <h4 class="text-center">Income</h4>
-          <div class="form-group row align-items-center">
-            <label for="Income" class="col-4 col-form-label-sm text-right fs-4"
-              >Income:</label
-            >
-            <div class="col-7">
-              <div class="input-group">
-                <input
-                  id="income-input"
-                  name="number"
-                  type="number"
-                  class="py-1 px-4"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- expence-->
-
+    <section class="container">
+      <div class="money-move money-layout d-flex">
+        <div class="money-img">
+          <img
+            src="images/jp-valery-9BatP4ovW2I-unsplash.jpeg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="money-calc">
           <div class="container">
-            <h4 class="text-center">Expense</h4>
-
-            <div class="form-group row align-items-center">
-              <label for="Food" class="col-4 col-form-label-sm text-right fs-4"
-                >Food:</label
-              >
-              <div class="col-7">
-                <div class="input-group">
-                  <input
-                    id="food-input"
-                    name="number"
-                    type="number"
-                    class="py-1 px-4"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-group row align-items-center">
-              <label for="Rent" class="col-4 col-form-label-sm text-right fs-4"
-                >Rent:</label
-              >
-              <div class="col-7">
-                <div class="input-group">
-                  <input
-                    id="rent-input"
-                    name="number"
-                    type="number"
-                    class="py-1 px-4"
-                  />
-                </div>
-              </div>
-            </div>
+            <!-- income -->
+            <h4 class="text-center">Income</h4>
             <div class="form-group row align-items-center">
               <label
-                for="Clothes"
+                for="Income"
                 class="col-4 col-form-label-sm text-right fs-4"
-                >Clothes:</label
+                >Income:</label
               >
               <div class="col-7">
                 <div class="input-group">
                   <input
-                    id="clothes-input"
+                    id="income-input"
                     name="number"
                     type="number"
                     class="py-1 px-4"
                   />
                 </div>
               </div>
-              <div class="text-center p-4">
-                <!-- cal btn -->
-                <button
-                  id="calculate-button"
-                  type="button"
-                  class="btn btn-lg btn-primary px-5"
+            </div>
+
+            <!-- expence-->
+
+            <div class="container">
+              <h4 class="text-center">Expense</h4>
+
+              <div class="form-group row align-items-center">
+                <label
+                  for="Food"
+                  class="col-4 col-form-label-sm text-right fs-4"
+                  >Food:</label
                 >
-                  Calculate
-                </button>
+                <div class="col-7">
+                  <div class="input-group">
+                    <input
+                      id="food-input"
+                      name="number"
+                      type="number"
+                      class="py-1 px-4"
+                    />
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 class="text-center">
-                  Total Expenses:<span id="total-expenses"> 0 </span>
-                </h4>
-                <h4 class="text-center">
-                  Balance:<span id="Balance"> 0 </span>
-                </h4>
+              <div class="form-group row align-items-center">
+                <label
+                  for="Rent"
+                  class="col-4 col-form-label-sm text-right fs-4"
+                  >Rent:</label
+                >
+                <div class="col-7">
+                  <div class="input-group">
+                    <input
+                      id="rent-input"
+                      name="number"
+                      type="number"
+                      class="py-1 px-4"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="save-part py-4 text-center">
-                <span>Save : </span>
-                <input
-                  id="save-input"
-                  placeholder="20"
-                  name="number"
-                  type="number"
-                  class="text-center"
-                />
-                <span>%</span>
-                <!-- save btn -->
-                <button id="save-button" class="btn btn-sm btn-primary">
-                  save
-                </button>
-              </div>
-              <div class="remaine-saving-Part py-4">
-                <h4 class="text-center">
-                  Saving Amount : <span id="saving-amount"> 0 </span>
-                </h4>
-                <h4 class="text-center">
-                  Remaining Balance : <span id="remaining-balance"> 0 </span>
-                </h4>
+              <div class="form-group row align-items-center">
+                <label
+                  for="Clothes"
+                  class="col-4 col-form-label-sm text-right fs-4"
+                  >Clothes:</label
+                >
+                <div class="col-7">
+                  <div class="input-group">
+                    <input
+                      id="clothes-input"
+                      name="number"
+                      type="number"
+                      class="py-1 px-4"
+                    />
+                  </div>
+                </div>
+                <div class="text-center p-4">
+                  <!-- cal btn -->
+                  <button
+                    id="calculate-button"
+                    type="button"
+                    class="btn btn-lg btn-primary px-5"
+                  >
+                    Calculate
+                  </button>
+                </div>
+                <div>
+                  <h4 class="text-center">
+                    Total Expenses:<span id="total-expenses"> 0 </span>
+                  </h4>
+                  <h4 class="text-center">
+                    Balance:<span id="Balance"> 0 </span>
+                  </h4>
+                </div>
+                <div class="save-part py-4 text-center">
+                  <span>Save : </span>
+                  <input
+                    id="save-input"
+                    placeholder="20"
+                    name="number"
+                    type="number"
+                    class="text-center"
+                  />
+                  <span>%</span>
+                  <!-- save btn -->
+                  <button id="save-button" class="btn btn-sm btn-primary">
+                    save
+                  </button>
+                </div>
+                <div class="remaine-saving-Part py-4">
+                  <h4 class="text-center">
+                    Saving Amount : <span id="saving-amount"> 0 </span>
+                  </h4>
+                  <h4 class="text-center">
+                    Remaining Balance : <span id="remaining-balance"> 0 </span>
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <!-- error -->
+      <div class="error-section">
+        <p id="error-input" class="error">
+          ❌ insert the right value & Please try again!
+        </p>
+        <p id="error-bigValue" class="error">❌ opps cost is too big!</p>
       </div>
     </section>
     <!-- custom js -->
