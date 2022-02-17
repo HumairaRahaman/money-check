@@ -1,42 +1,4 @@
-// document.getElementById('calculate-button').addEventListener('click', function() {
 
-//     const foodField = document.getElementById('food-input').value;
-//     const rentField = document.getElementById('rent-input').value;
-//     const clothesField = document.getElementById('clothes-input').value;
-
-//     const calculateValue = parseFloat(foodField) + parseFloat(rentField) + parseFloat(clothesField);
-
-
-
-//     const totalExpenses = document.getElementById('total-expenses').innerText = calculateValue;
-
-//     const incomeField = document.getElementById('income-input').value;
-
-//     const totalBalence = parseFloat(incomeField) - parseFloat(calculateValue)
-
-//     const BalenceOf = document.getElementById('Balance').innerText = totalBalence
-// })
-
-// document.getElementById('save-button').addEventListener('click', function() {
-//     const incomeField = document.getElementById('income-input').value;
-//     console.log(incomeField);
-//     const discounField = document.getElementById('save-input').value;
-//     console.log(discounField);
-
-//     const Discount = (parseFloat(incomeField) * parseFloat(discounField)) / 100;
-
-//     console.log(Discount);
-//     const savingAmount = document.getElementById('saving-amount').innerText = Discount;
-
-//     const BalenceOf = document.getElementById('Balance').innerText;
-
-//     const remainingBalence = parseFloat(BalenceOf) - parseFloat(savingAmount)
-
-//     document.getElementById('remaining-balance').innerText = remainingBalence;
-// })
-
-
-////////////////////////////////////////////////////////////////
 // input function
 function getInputValue(catagory){
     const valueInput = document.getElementById(catagory +'-input');
@@ -50,22 +12,39 @@ function getInputValue(catagory){
 document.getElementById('calculate-button').addEventListener('click',function (){
 
     let totalExpense = getInputValue('food') + getInputValue('rent') + getInputValue('clothes');
-    // document.getElementById('total-expenses').innerText = totalExpense;
+    
     
     let valueError = document.getElementById('error-bigValue');
     let inputError = document.getElementById('error-input');
+
+
     //error handle
     if(getInputValue('income') < totalExpense){
+        //error
         errorHandel(true);
+
+        //for value zero
+        convertZero('remaining-balance');
+        convertZero('saving-amount');
+        convertZero('total-expenses');
+        convertZero('Balance');
     }
+
     else if(getInputValue('income') < 0  || getInputValue('food') < 0 || getInputValue('rent')< 0 || getInputValue('clothes') < 0){
-  
+        //error
         errorHandel(false);
+
+        //for value zero
+        convertZero('remaining-balance');
+        convertZero('saving-amount');
+        convertZero('total-expenses');
+        convertZero('Balance');
         
     }
+
     else{
+
         //expence
-      
         document.getElementById('total-expenses').innerText = totalExpense;
         
         //balance
@@ -78,32 +57,53 @@ document.getElementById('calculate-button').addEventListener('click',function ()
     
 });
 
+
+
+// saving button
+
 document.getElementById('save-button').addEventListener('click', function(){
 
     //saving amount
     let savingBalance = getInputValue('income') * getInputValue('save') / 100;
     
-    document.getElementById('saving-amount').innerText = savingBalance
-
+   
     //reaming balance
     let totalExpense = getInputValue('food') + getInputValue('rent') + getInputValue('clothes')
 
     let remainingBalence = getInputValue('income') - (totalExpense+ savingBalance)
    
 
-    document.getElementById('remaining-balance').innerText = remainingBalence;
+   
 
-    //error
+
+    //error handel
+
     if((getInputValue('income') - totalExpense) < savingBalance){
+    //error
     errorHandel(true);
-    document.getElementById('remaining-balance').innerText = 0;
-    document.getElementById('saving-amount').innerText = 0;
+    //for value zero
+    convertZero('remaining-balance');
+    convertZero('saving-amount');
+    convertZero('total-expenses');
+    convertZero('Balance');
+    }
+    else if(getInputValue('save') < 0 ) {
+        //error
+        errorHandel(false);
+        //for value zero
+        convertZero('remaining-balance');
+        convertZero('saving-amount');
+        convertZero('total-expenses');
+        convertZero('Balance');
     }
     else{
-        errorHandel(false);
-        document.getElementById('remaining-balance').innerText = 0;
-        document.getElementById('saving-amount').innerText = 0;
+        document.getElementById('saving-amount').innerText = savingBalance;
+        document.getElementById('remaining-balance').innerText = remainingBalence;
+
     }
+
+
+    //clear input field
     clear('save');
     clear('income');
      clear('food');
@@ -128,7 +128,7 @@ function errorHandel(errorType){
         clear('clothes');
         
     }
-    else{
+    else if(errorType == false){
         inputError.style.display = 'block';
         valueError.style.display = 'none';
         clear('save');
@@ -139,10 +139,19 @@ function errorHandel(errorType){
     }
 }
 
-//input vield clear
+
+
+//input field clear function
 function clear(cost){
     const valueInput = document.getElementById(cost +'-input');
     valueInput.value = "";
-    // const elementValue = parseFloat(valueInput.value);
+  
 
+}
+
+
+// remain value zero function
+
+function convertZero(value){
+    document.getElementById(value).innerText = 0;
 }
