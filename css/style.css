@@ -71,4 +71,7 @@ section {
   .money-img {
     margin-left: 0;
   }
+  .input-field {
+    overflow: hidden;
+  }
 }
