@@ -15,7 +15,7 @@ header h2 {
   font-size: 60px;
 }
 section {
-  background-color: antiquewhite;
+  background-color: #b1fffe36;
 }
 
 .money-layout {
@@ -44,7 +44,7 @@ section {
   color: #fff;
   text-align: center;
   margin: 0 auto;
-  background: #12a305cb;
+  background: #98d201;
   margin-top: 20px;
   border-radius: 15px;
   padding: 5px 20px;
@@ -54,4 +54,11 @@ section {
   width: 35%;
   margin: 0 auto;
   padding-bottom: 50px;
+}
+
+/* media query */
+@media (max-width: 768px) {
+  .money-img {
+    margin-left: 0;
+  }
 }

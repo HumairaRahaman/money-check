@@ -94,7 +94,7 @@ document.getElementById('save-button').addEventListener('click', function(){
     document.getElementById('remaining-balance').innerText = remainingBalence;
 
     //error
-    if(remainingBalence< savingBalance){
+    if((getInputValue('income') - totalExpense) < savingBalance){
     errorHandel(true);
     document.getElementById('remaining-balance').innerText = 0;
     document.getElementById('saving-amount').innerText = 0;
