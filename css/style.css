@@ -38,6 +38,16 @@ section {
   flex-basis: 40%;
   padding: 100px 20px;
 }
+.field-color {
+  background-color: #97d2013d;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.field-color-is {
+  background-color: #00843728;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
 
 /* error */
 .error {

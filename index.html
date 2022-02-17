@@ -36,9 +36,9 @@
           <div class="container">
             <!-- income -->
             <h4 class="text-center">Income</h4>
-            <div class="form-group row align-items-center">
+            <div class="form-group row align-items-center field-color-is">
               <label
-                for="Income"
+                for="income-input"
                 class="col-4 col-form-label-sm text-right fs-4"
                 >Income:</label
               >
@@ -59,9 +59,9 @@
             <div class="container">
               <h4 class="text-center">Expense</h4>
 
-              <div class="form-group row align-items-center">
+              <div class="form-group row align-items-center field-color">
                 <label
-                  for="Food"
+                  for="food-input"
                   class="col-4 col-form-label-sm text-right fs-4"
                   >Food:</label
                 >
@@ -76,9 +76,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row align-items-center">
+              <div class="form-group row align-items-center field-color">
                 <label
-                  for="Rent"
+                  for="rent-input"
                   class="col-4 col-form-label-sm text-right fs-4"
                   >Rent:</label
                 >
@@ -93,9 +93,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row align-items-center">
+              <div class="form-group row align-items-center field-color">
                 <label
-                  for="Clothes"
+                  for="clothes-input"
                   class="col-4 col-form-label-sm text-right fs-4"
                   >Clothes:</label
                 >
@@ -109,47 +109,47 @@
                     />
                   </div>
                 </div>
-                <div class="text-center p-4">
-                  <!-- cal btn -->
-                  <button
-                    id="calculate-button"
-                    type="button"
-                    class="btn btn-lg btn-primary px-5"
-                  >
-                    Calculate
-                  </button>
-                </div>
-                <div>
-                  <h4 class="text-center">
-                    Total Expenses:<span id="total-expenses"> 0 </span>
-                  </h4>
-                  <h4 class="text-center">
-                    Balance:<span id="Balance"> 0 </span>
-                  </h4>
-                </div>
-                <div class="save-part py-4 text-center">
-                  <span>Save : </span>
-                  <input
-                    id="save-input"
-                    placeholder="20"
-                    name="number"
-                    type="number"
-                    class="text-center"
-                  />
-                  <span>%</span>
-                  <!-- save btn -->
-                  <button id="save-button" class="btn btn-sm btn-primary">
-                    save
-                  </button>
-                </div>
-                <div class="remaine-saving-Part py-4">
-                  <h4 class="text-center">
-                    Saving Amount : <span id="saving-amount"> 0 </span>
-                  </h4>
-                  <h4 class="text-center">
-                    Remaining Balance : <span id="remaining-balance"> 0 </span>
-                  </h4>
-                </div>
+              </div>
+              <div class="text-center p-4">
+                <!-- calculate btn -->
+                <button
+                  id="calculate-button"
+                  type="button"
+                  class="btn btn-lg btn-primary px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+              <div>
+                <h4 class="text-center">
+                  Total Expenses:<span id="total-expenses"> 0 </span>
+                </h4>
+                <h4 class="text-center">
+                  Balance:<span id="Balance"> 0 </span>
+                </h4>
+              </div>
+              <div class="save-part py-4 text-center field-color-is">
+                <span>Save : </span>
+                <input
+                  id="save-input"
+                  placeholder="20"
+                  name="number"
+                  type="number"
+                  class="text-center"
+                />
+                <span>%</span>
+                <!-- save btn -->
+                <button id="save-button" class="btn btn-sm btn-primary">
+                  save
+                </button>
+              </div>
+              <div class="remaine-saving-Part py-4">
+                <h4 class="text-center">
+                  Saving Amount : <span id="saving-amount"> 0 </span>
+                </h4>
+                <h4 class="text-center">
+                  Remaining Balance : <span id="remaining-balance"> 0 </span>
+                </h4>
               </div>
             </div>
           </div>
