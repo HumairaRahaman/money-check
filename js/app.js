@@ -43,16 +43,39 @@ function getInputValue(catagory){
     const elementValue = parseFloat(valueInput.value);
     return elementValue;
   
-    calc();
+    // calc();
 }
 
 //calculate button
 
 document.getElementById('calculate-button').addEventListener('click',function calc(){
+
+    //expence
     let totalExpense = getInputValue('food') + getInputValue('rent') + getInputValue('clothes');
     document.getElementById('total-expenses').innerText = totalExpense;
+
+    //balance
     let balance = getInputValue('income') - totalExpense;
 
     document.getElementById('Balance').innerText = balance;
     
-})
+});
+
+document.getElementById('save-button').addEventListener('click', function(){
+
+    //saving amount
+    let savingBalance = getInputValue('income') * getInputValue('save') / 100;
+    
+    document.getElementById('saving-amount').innerText = savingBalance
+
+    //reaming balance
+    let totalExpense = getInputValue('food') + getInputValue('rent') + getInputValue('clothes')
+
+    let remainingBalence = getInputValue('income') - (totalExpense+ savingBalance)
+    console.log(remainingBalence)
+
+    document.getElementById('remaining-balance').innerText = remainingBalence;
+
+
+});
+
